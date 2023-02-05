@@ -36,7 +36,7 @@ docker run --rm --mount type=bind,source="${image_file}",target=/data/image_file
 
 One option is to use Apple Shortcuts to take a screenshot and pass the file to the QR code decoder. [Find QR Codes](https://www.icloud.com/shortcuts/6c0db5f5e449402f9909a544eb045cb3) can be imported. It does the following:
 
-![Screenshot of Apple Shortcuts showing actions to invoke the QR code decoder](https://jlamoree.github.io/qr/find-qr-codes.png "Find QR Codes Shortcut Screenshot")
+![Screenshot of Apple Shortcuts showing actions to invoke the QR code decoder](https://jlamoree.github.io/qr/find-qr-codes-shortcut.png "Find QR Codes Shortcut Screenshot")
 
 
 ## Build

@@ -13,12 +13,10 @@ The [zbar](https://zbar.sourceforge.net) library seems to work best when QR code
 ```shell
 tag=0.0.2
 username=$(whoami)
-docker build -t qr:$tag --platform=linux/amd64 .
-docker build -t qr:$tag --platform=linux/arm64 .
 op read op://builder/docker-builder-access-token/password | \
   docker login --username $username --password-stdin
-docker tag qr:$tag $usrename/qr:$tag 
-docker push $usrename/qr:$tag 
+docker buildx build --platform linux/amd64,linux/arm64 \
+  --tag $username/qr:latest --tag $username/qr:$tag --push .
 ```
 
 ## Run
